@@ -18,9 +18,13 @@
     </header>
 
     <% if notice %>
-      <%= notice %>
+      <div class="alert alert-success" role="alert">
+        <%= notice %>
+      </div>
     <% elsif alert %>
-      <%= alert %>
+      <div class="alert alert-success" role="alert">
+        <%= alert %>
+      </div>
     <% end %>
 
     <%= yield %>

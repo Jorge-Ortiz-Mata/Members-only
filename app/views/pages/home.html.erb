@@ -1,2 +1,20 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1 class="text-center">
+    Members only app.
+</h1>
+
+<h3 class="text-center">All posts.</h3>
+
+<div class="text-center">
+    <% @posts.each do |post| %>
+    <br>
+        <div class="card mr-auto ml-auto" style="width: 50rem;">
+            <div class="card-body">
+                <p class="card-text">
+                    <%= post.body %>
+                    <br>
+                    <b><%= post.user.email if current_user %></b>
+            </div>
+        </div>
+    <% end %>
+
+</div>
